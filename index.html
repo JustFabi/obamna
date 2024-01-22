@@ -1,47 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.cdnfonts.com/css/comic-sans" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="icon" href="/img/obamna.jpeg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.cdnfonts.com/css/comic-sans" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" href="./img/obamna.jpeg" />
     <title>Obama Prism</title>
-</head>
-<body onload="obamna();" onclick="wumpus();" style="background-image: url(./img/lobstermann.webp); background-repeat: round; background-size: cover; cursor: pointer; overflow: hidden;">
-    <marquee behavior="alternate" scrollamount="60" style="position: absolute; z-index:10">
-        <marquee behavior="alternate" scrollamount="50" direction="down" style="position: absolute; z-index:10">
-            <img id="amoguli" style="width: 15%; z-index:10" src="/img/Susremaster.webp" alt="sus"> 
-        </marquee>
+  </head>
+  <body
+    onload="sus();"
+    onclick="wumpus();"
+    style="
+      background-image: url(./img/lobstermann.webp);
+      background-repeat: round;
+      background-size: cover;
+      cursor: crosshair;
+      overflow: scroll;
+    "
+  >
+    <marquee
+      behavior="alternate"
+      scrollamount="60"
+      style="position: absolute; z-index: 10"
+    >
+      <marquee
+        behavior="alternate"
+        scrollamount="50"
+        direction="down"
+        style="position: absolute; z-index: 10"
+      >
+        <img
+          id="amoguli"
+          style="width: 15%; z-index: 10"
+          src="./img/Susremaster.webp"
+          alt="sus"
+        />
+      </marquee>
     </marquee>
-    <img id="imposter1" src="/img/impostersus-the-impostor-is-sus.gif" alt="sus"> 
-    <img id="imposter2" src="/img/impostersus-the-impostor-is-sus.gif" alt="sus">
-    <iframe src="/music/EARRAPE LOBSTER MEME.mp3" type='audio/mp3' allow='autoplay' id='audio' style='display:none'></iframe>
-        <audio autoplay>
-            <source src="/music/EARRAPE LOBSTER MEME.mp3" type="audio/mp3">
-            </audio>
-   <div class="obamna">
-    <div style="position: relative;">
-        <h2 class="obamnafont" onclick="wumpus()">Obama Prism</h2>
+    <img
+      id="imposter1"
+      src="./img/impostersus-the-impostor-is-sus.gif"
+      alt="sus"
+    />
+    <img
+      id="imposter2"
+      src="./img/impostersus-the-impostor-is-sus.gif"
+      alt="sus"
+    />
+    <iframe
+      src="/obamna-main//music/lobber_earrape.mp3"
+      type="audio/mp3"
+      allow="autoplay"
+      id="audio"
+      style="display: none"
+    >
+      <audio autoplay>
+        <source src="/obamna-main/music/lobber_earrape.mp3" type="audio/mp3" />
+      </audio>
+    </iframe>
+    <div class="obamna">
+      <div style="position: relative">
+        <h2 class="obamnafont" onclick="wumpus()">Obama Prism!</h2>
         <span id="obamnafontunderline"></span>
+      </div>
+      <img height="900px" src="./img/obamiusmaximus.gif" alt="obamna" />
+      <div style="position: relative">
+        <h2 class="obamnafont" onclick="wumpus()">Obama Prism!</h2>
+        <span id="obamnafontunderline"></span>
+      </div>
     </div>
-       <img height="900px" src="/img/obamiusmaximus.gif" alt="obamna">
-       <div style="position: relative;">
-           <h2 class="obamnafont" onclick="wumpus()">Obama Prism</h2>
-           <span id="obamnafontunderline"></span>
-       </div>
-   </div>
-</body>
-<script> 
-    function obamna() {
-        document.querySelector("#obamnafontunderline").classList.toggle("visible");
-        setTimeout(() => {
-            obamna();
-        }, 50);
-    }  
-    function wumpus() {
-        window.open("https://www.youtube.com/watch?v=OgZzUJud3Q4","_blank");
+  </body>
+  <script>
+    function sus() {
+      obamna();
+
+      setInterval(() => {
+        document.querySelectorAll(".obamnafont").forEach((e) => {
+          console.log("aids");
+          e.innerText = e.innerText + " !";
+          e.innerText = owoify(e.innerText);
+        });
+      }, 2);
     }
-</script>
+
+    function obamna() {
+      document
+        .querySelector("#obamnafontunderline")
+        .classList.toggle("visible");
+      setTimeout(() => {
+        obamna();
+      }, 50);
+    }
+
+    function wumpus() {
+      window.open("https://www.youtube.com/watch?v=OgZzUJud3Q4", "_blank");
+    }
+    const kaomoji = [
+      "(*^ω^)",
+      "(◕‿◕✿)",
+      "(◕ᴥ◕)",
+      "ʕ•ᴥ•ʔ",
+      "ʕ￫ᴥ￩ʔ",
+      "(*^.^*)",
+      "owo",
+      "OwO",
+      "(｡♥‿♥｡)",
+      "uwu",
+      "UwU",
+      "(*￣з￣)",
+      ">w<",
+      "^w^",
+      "(つ✧ω✧)つ",
+      "(/ =ω=)/",
+    ];
+
+    function owoify(text) {
+      return text
+        .replace(/(?:l|r)/g, "w")
+        .replace(/(?:L|R)/g, "W")
+        .replace(/n([aeiou])/g, "ny$1")
+        .replace(/N([aeiou])|N([AEIOU])/g, "Ny$1")
+        .replace(/ove/g, "uv")
+        .replace(/nd(?= |$)/g, "ndo")
+        .replace(
+          /!+/g,
+          " " + kaomoji[Math.floor(Math.random() * kaomoji.length)]
+        );
+    }
+  </script>
 </html>
